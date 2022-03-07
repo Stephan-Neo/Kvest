@@ -1,0 +1,14 @@
+.preview{
+    font-size: 46px;
+    display: flex;
+    justify-content: space-between;
+    background-color: cyan;
+    height: 600px;
+}
+.greeting{
+    font-size: 20px;
+    width: 60%;
+}
+.graphics{
+    width: 40%;
+}
