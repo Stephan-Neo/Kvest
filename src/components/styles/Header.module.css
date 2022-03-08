@@ -2,7 +2,7 @@
     font-size: 46px;
     display: flex;
     justify-content: space-between;
-    background-color: cyan;
+    background-color: rgba(86, 77, 211, 0.87);
     height: 600px;
 }
 .greeting{
