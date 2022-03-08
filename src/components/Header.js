@@ -14,15 +14,13 @@ const AnimateFrame = (props) => {
   }
 
 function Header() {
-    const myMesh = React.useRef();
+    const myMesh = React.useRef(null);
     return (
      <div className={s.preview}>
          <div className={s.greeting}>Hello</div>
          <div className={s.graphics}>
-           
             <Canvas camera={{position: [18, 10, 20], zoom: 1}}>
                 {/* <color attach='background' args={["lightblue"]}/> */}
-                
                     <OrbitControls />
                     <ambientLight intensity={0.5}/>
                     <spotLight position={[20, 5, -10]} angle={0.9} />
@@ -31,8 +29,8 @@ function Header() {
                         <mesh ref={myMesh}>
                             <Model />
                         </mesh>
+                        <AnimateFrame meshRef={myMesh} />
                     </Suspense>
-                <AnimateFrame meshRef={myMesh} />
             </Canvas>
         </div>
     </div> 
