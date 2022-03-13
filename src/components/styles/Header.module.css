@@ -1,17 +1,25 @@
 .preview{
     font-size: 46px;
+    padding-left: 40px;
     display: flex;
     justify-content: space-between;
     background-color: rgba(86, 77, 211, 0.87);
     height: 600px;
 }
 .greeting{
-    font-size: 20px;
-    width: 50%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    font-size: 80px;
+    font-weight: 800;
+    color: whitesmoke; 
+    width: 30%;
     order: 1;
 }
 .graphics{
-    width: 50%;
+    width: 70%;
     order: 2;
 }
 

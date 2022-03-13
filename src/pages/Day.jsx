@@ -1,11 +1,14 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Header from '../components/Header';
+import s from './styles/Day.module.css'
 
-function Day({text}) {
+function Day(props) {
     return(
         <>
-            <div>
-                {text}
+            <Header id_day={props.id_day}/>
+            <div className={s.task}>
+                {props.text}
+                {props.id_day}
             </div>
         </>
         
