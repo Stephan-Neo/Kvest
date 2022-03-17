@@ -11,7 +11,7 @@ function Header(props) {
             <div className={s.preview}>
                 <motion.div className={s.greeting}>
                     <span>Вечерний квест</span>
-                    <span>День {props.id_day}</span>
+                    <span>{props.id_day}</span>
                 </motion.div>
                 <div className={s.graphics}>
                     <Text />
