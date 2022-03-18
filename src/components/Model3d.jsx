@@ -17,7 +17,7 @@ function Model3d(){
     const myMesh = React.useRef(null);
     return(
         <Canvas camera={{position: [18, 10, 20], zoom: 1 }}>
-            <OrbitControls enableZoom={false} reverseOrbit={false}/>
+            <OrbitControls enableZoom={false} reverseOrbit={false} enableRotate={true} enablePan={false}/>
             <ambientLight intensity={0.5}/>
             <Suspense fallback={null}>
                 <mesh ref={myMesh}>

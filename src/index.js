@@ -4,10 +4,12 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import MainPage from './pages/MainPage';
 import Day from './pages/Day';
 import Header from './components/Header';
+import SignUp from './components/forms/SignUp'
 
 ReactDOM.render(
   <BrowserRouter>
     <Routes>
+      <Route path='/signup' element={<SignUp/>}/>
       <Route path='/' element={<Header />}/>
       <Route path='/' element={<MainPage />}>
         <Route path="day1" element={<Day text={'Lrtretrtert'} id_day={'День 1'}/>} />
