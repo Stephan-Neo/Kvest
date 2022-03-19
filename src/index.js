@@ -4,12 +4,12 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import MainPage from './pages/MainPage';
 import Day from './pages/Day';
 import Header from './components/Header';
+import LogIn from './components/forms/LogIn'
 import SignUp from './components/forms/SignUp'
 
 ReactDOM.render(
   <BrowserRouter>
     <Routes>
-      <Route path='/signup' element={<SignUp/>}/>
       <Route path='/' element={<Header />}/>
       <Route path='/' element={<MainPage />}>
         <Route path="day1" element={<Day text={'Lrtretrtert'} id_day={'День 1'}/>} />
@@ -18,6 +18,10 @@ ReactDOM.render(
         <Route path="day4" element={<Day text={'dfgdfgdfgdd'} id_day={'День 4'}/>} />
         <Route path="day5" element={<Day text={'dfgdfgdfgdd'} id_day={'День 5'}/>} />
       </Route>
+
+      <Route path='signup' element={<SignUp/>}/>
+      <Route path='login' element={<LogIn/>}/>    
+
     </Routes>
   </BrowserRouter>,
   document.getElementById('root')

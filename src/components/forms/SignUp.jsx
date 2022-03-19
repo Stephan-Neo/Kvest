@@ -2,6 +2,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import s from "../styles/SignUp.module.css"
 import Model3d from "../Model3d";
+import { Link } from "react-router-dom";
 
 function SignUp() {
   const {
@@ -96,6 +97,10 @@ function SignUp() {
             </div>
             <input type="submit" className={s.button} disabled={!isValid}/>
         </form>
+        <div className={s.links}>
+          <Link to='/' className={s.link_login}>Главная</Link>
+          <Link to='/login' className={s.link_login}>Войти</Link>
+        </div>
       </div>
     </div>
       

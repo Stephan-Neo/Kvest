@@ -36,7 +36,7 @@ form{
     font-size: 24px;
     font-weight: 700;
     margin-top: 20px;
-    padding: 10px 0 20px 0;
+    padding: 20px 0 30px 0;
     width: 100%;
     border-radius: 0 0 15px 15px;
     transition: all 0.5s;
@@ -48,7 +48,7 @@ form{
     font-size: 24px;
     font-weight: 700;
     margin-top: 20px;
-    padding: 10px 0 20px 0;
+    padding: 20px 0 30px 0;
     width: 100%;
     border-radius: 0 0 15px 15px;
     transition: all 0.5s;
@@ -78,4 +78,66 @@ p{
     color: red;
     margin: 0 2.5%;
     margin-top: 5px;
+}
+.link_login{
+    color: white;
+    font-weight: 800;
+    font-size: 24px;
+}
+.link_login:hover{
+    color:#6a11cb;
+}
+.links{
+    padding: 20px;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+}
+@media (max-width: 1024px){
+    .form{
+        margin: 10px;
+    }
+}
+@media (max-width: 1023px){
+    .graphics{
+        display: none;
+    }
+    .wrapper{
+        justify-content: center;
+    }
+    .form{
+        margin: 0;
+    }
+}
+@media (max-width: 768px){
+    .form{
+        width: 70%;
+    }
+}
+@media (max-width: 767px){
+    .form{
+        width: 100%;
+    }
+    form{
+        border-radius: 0px;
+    }
+    .button:enabled{
+        border-radius: 0px;
+        padding: 30px 0 40px 0;
+    }
+    .button:disabled{
+        border-radius: 0px;
+        padding: 30px 0 40px 0;
+    }
+    .input{
+        height: 80px;
+    }
+    .links{
+        padding: 20px 10px 20px 10px;
+        justify-content: space-between;
+    }
+    .reg{
+        font-size: 40px;
+    }
 }
