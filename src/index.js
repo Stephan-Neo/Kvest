@@ -6,6 +6,7 @@ import Day from './pages/Day';
 import Header from './components/Header';
 import LogIn from './components/forms/LogIn'
 import SignUp from './components/forms/SignUp'
+import Form from "./components/forms/Form"
 
 ReactDOM.render(
   <BrowserRouter>
@@ -19,8 +20,8 @@ ReactDOM.render(
         <Route path="day5" element={<Day text={'dfgdfgdfgdd'} id_day={'День 5'}/>} />
       </Route>
 
-      <Route path='signup' element={<SignUp/>}/>
-      <Route path='login' element={<LogIn/>}/>    
+      <Route path='signup' element={<Form children={<SignUp/>}/>}/>
+      <Route path='login' element={<Form children={<LogIn/>}/>}/>  
 
     </Routes>
   </BrowserRouter>,

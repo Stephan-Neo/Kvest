@@ -76,6 +76,7 @@ input:focus::placeholder {
 }
 p{
     color: red;
+    font-weight: 500;
     margin: 0 2.5%;
     margin-top: 5px;
 }

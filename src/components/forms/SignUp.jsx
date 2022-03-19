@@ -1,7 +1,6 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import s from "../styles/SignUp.module.css"
-import Model3d from "../Model3d";
 import { Link } from "react-router-dom";
 
 function SignUp() {
@@ -21,10 +20,6 @@ function SignUp() {
     reset();
   }
   return (
-    <div className={s.wrapper}>
-      <div className={s.graphics}>
-        <Model3d />
-      </div>
       <div className={s.form}>
         <div className={s.reg}>Регистрация</div>
         <form onSubmit={handleSubmit(onSubmit)}>
@@ -102,9 +97,6 @@ function SignUp() {
           <Link to='/login' className={s.link_login}>Войти</Link>
         </div>
       </div>
-    </div>
-      
-    
   )
 }
 export default SignUp;

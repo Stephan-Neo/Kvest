@@ -1,12 +1,11 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import s from "../styles/SignUp.module.css"
-import Model3d from "../Model3d";
 import { Link } from "react-router-dom";
 
 function LogIn() {
   const {
-    register, watch,
+    register, 
     formState: {
       errors, isValid
     },
@@ -21,10 +20,6 @@ function LogIn() {
     reset();
   }
   return (
-    <div className={s.wrapper}>
-      <div className={s.graphics}>
-        <Model3d />
-      </div>
       <div className={s.form}>
         <div className={s.reg}>Войти</div>
         <form onSubmit={handleSubmit(onSubmit)}>
@@ -75,10 +70,7 @@ function LogIn() {
           <Link to='/' className={s.link_login}>Главная</Link>
           <Link to='/signup' className={s.link_login}>Регистрация</Link>
         </div>
-      </div>
-    </div>
-      
-    
+      </div> 
   )
 }
 export default LogIn;

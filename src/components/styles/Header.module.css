@@ -66,11 +66,13 @@
     .preview{
         flex-direction: column;
         padding: 0;
+        justify-content: center;
         height: auto;
     }
     .greeting{
         width: auto;
         order: 2;
+        margin: 0px;
         font-size: 50px;
         padding: 0px 20px 20px 20px;
     }
