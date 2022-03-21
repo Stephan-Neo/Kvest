@@ -11,8 +11,8 @@ extend({ TextGeometry })
 
 function Animation(props) {
     const font = new FontLoader().parse(myFont);
-    const ref = useRef()
     const [clicked, click] = useState(false)
+    const ref = useRef()
     useEffect( () => {
         ref.current.geometry.computeBoundingBox();
         let boundingBox = ref.current.geometry.boundingBox;
