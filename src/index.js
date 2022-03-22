@@ -17,7 +17,7 @@ ReactDOM.render(
         <Route path="day2" element={<Day text={'dfgdfgdfgdd'} id_day={'День 2'}/>} />
         <Route path="day3" element={<Day text={'dfgdfgdfgdd'} id_day={'День 3'}/>} />
         <Route path="day4" element={<Day text={'dfgdfgdfgdd'} id_day={'День 4'}/>} />
-        <Route path="day5" element={<Day text={'dfgdfgdfgdd'} id_day={'День 5'}/>} />
+        <Route path="day5" element={<Day text={'dfgdfgdfgdd'} id_day={'День 6'}/>} />
       </Route>
 
       <Route path='signup' element={<Form children={<SignUp/>}/>}/>
