@@ -1,7 +1,16 @@
+
 .task{
     color: white;
     background-color: rgb(104, 164, 218);
     padding: 30px;
     border-radius: 15px;
     margin: 30px 10px 0 10px;
+}
+.navbar_wrapper{
+    position: fixed;
+    display: flex;
+    z-index: 70;
+    width: 100%;
+    justify-content: space-between;
+    padding: 1rem;
 }

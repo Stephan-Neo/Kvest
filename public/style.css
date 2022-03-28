@@ -47,3 +47,15 @@ html{
 .link{
     color: whitesmoke;
 }
+#day1{
+    background: -webkit-linear-gradient(left,#6a11cb,#2575fc);
+}
+#day2{
+    background: -webkit-linear-gradient(left,#20a140,#0d47e7);
+}
+#day3{
+    background: -webkit-linear-gradient(left,#cb11cb,#4abd1c);
+}
+#day4{
+    background: -webkit-linear-gradient(left,#04d9ff,#bd1c1c);
+}

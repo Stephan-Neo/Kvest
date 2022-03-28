@@ -1,9 +1,10 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { useForm } from "react-hook-form";
 import s from "../styles/SignUp.module.css"
 import { Link } from "react-router-dom";
 
 function SignUp() {
+  useEffect(() => {document.title = 'Вечерний Квест | Регистрация'})
   const {
     register, watch,
     formState: {

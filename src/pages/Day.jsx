@@ -1,17 +1,19 @@
-import React from 'react';
-import Header from '../components/Header';
+import React, { useEffect } from 'react';
 import s from './styles/Day.module.css'
+import Navbar from '../components/Navbar';
+import ReactFullpage from '@fullpage/react-fullpage';
 
 function Day(props) {
+    useEffect(() => {
+        document.title = props.title;
+    })
     return(
-        <>
-            <Header id_day={props.id_day}/>
-            <div className={s.task}>
-                {props.text}
-                {props.id_day}
+        <>  
+            <div className={s.navbar_wrapper}>
+                <Navbar Nav={props.Nav}/>
             </div>
-        </>
-        
+            {props.DayComponent}
+        </> 
     )
 }
 

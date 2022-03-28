@@ -1,10 +1,9 @@
 .preview{
     font-size: 46px;
     display: flex;
+    height: 700px;
     justify-content: space-between;
-    background: -webkit-linear-gradient(left,#6a11cb,#2575fc);
-    min-height: 100vh;
-    align-items: center;
+    align-items: stretch;
 }
 .link_container{
     margin-top: 30px;
@@ -52,6 +51,7 @@
     }
     .greeting{
         font-size: 70px;
+        margin-left: 1rem;
     }
     .link_container{
         width: 70%;

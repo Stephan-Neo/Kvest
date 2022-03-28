@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import s from "../styles/SignUp.module.css"
 import { Link } from "react-router-dom";
 
 function LogIn() {
+  useEffect(() => {document.title = 'Вечерний Квест | Войти'})
   const {
     register, 
     formState: {

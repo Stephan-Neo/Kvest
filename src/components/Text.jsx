@@ -30,6 +30,7 @@ function Animation(props) {
         <textGeometry args={['FKN', {font, size:5, height: 3}]}/>
         <meshLambertMaterial attach='material' color={clicked ? 'hotpink' : 'orange'}/>
       </mesh>
+      
     )
 }
 

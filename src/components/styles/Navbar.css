@@ -1,0 +1,122 @@
+/* #22272e */
+:root{
+    --colorNav: #22272e;
+}
+.navbar{
+    height: 80px;
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
+}
+
+.menu-bars{
+    font-size: 3rem;
+    background: none;
+    margin-bottom: 20px;
+}
+
+.nav-menu {
+    background-color: var(--colorNav);
+    width: 30%;
+    padding: 10px;
+    height: 100vh;
+    display:  flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    transition: 350ms;
+}
+.nav-menu.active{
+    left: 0;
+    transition: 350ms;
+}
+.nav-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 0px 16px 0px;
+    list-style: none;
+    height: 60px;
+    width: 100%;
+}
+
+.nav-text a{
+    text-decoration: none;
+    color: #f5f5f5;
+    font-size: 20px;
+    font-weight: 700;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    border-radius: 4px;
+}
+
+.nav-text a:hover {
+    background-color: #1a83ff;
+  }
+  
+.nav-menu-items {
+    width: 100%;
+}
+.navbar-toggle {
+    background-color: var(--colorNav);
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+span {
+    margin-left: 16px;
+}
+.link-status ul{
+    display: flex;
+    margin: 10px 10px 0px 0px;
+    letter-spacing: 1px;
+    font-size: 1.1em;
+}
+.link-status ul li a{
+    margin: 0 1.1em 0.1em 1.1em;
+    padding: 0 0  0.2em 0;
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+}
+#myMenu li.active a{
+    border-bottom: 3px solid white;
+}
+.login{
+    display: flex;
+    justify-content: space-around;
+    background: #1a83ff;
+    padding: 10px 10px 12px 10px;
+    border-radius: 4px;
+}
+.login li a{
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+    transition: all 0.3ms;
+}
+.nav-menu-items{
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.login li a:hover{
+    border-bottom: 2px solid white;
+}
+.day{
+    padding: 0;
+}
+#last-day{
+    border-bottom: 1px solid rgb(151, 145, 145);
+}
+#mainpage-link{
+    margin-top: 16px;
+}
