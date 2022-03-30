@@ -59,3 +59,9 @@ html{
 #day4{
     background: -webkit-linear-gradient(left,#04d9ff,#bd1c1c);
 }
+body>#default{
+    display: none;
+}
+body>#day{
+    display: none;
+}

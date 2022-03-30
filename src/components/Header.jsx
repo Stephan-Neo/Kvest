@@ -11,14 +11,14 @@ function Header(props) {
                 <div className={s.preview}>
                     <div  className={s.greeting}>
                         <span>
-                            Вечерний квест
+                            Вечерний квест&nbsp;
                         </span>
                         <span>
                             {props.day}
                         </span>
                     </div>
                     <div className={s.graphics}>
-                        <Text />
+                        <Text/>
                         {/* <Model3d /> */}
                     </div>
                 </div>

@@ -11,7 +11,6 @@ extend({ TextGeometry })
 
 function Animation(props) {
     const font = new FontLoader().parse(myFont);
-    const [clicked, click] = useState(false)
     const ref = useRef()
     useEffect( () => {
         ref.current.geometry.computeBoundingBox();
@@ -25,10 +24,9 @@ function Animation(props) {
       <mesh
         {...props}
         ref={ref}
-        onClick={(event) => click(!clicked)}
         >
         <textGeometry args={['FKN', {font, size:5, height: 3}]}/>
-        <meshLambertMaterial attach='material' color={clicked ? 'hotpink' : 'orange'}/>
+        <meshLambertMaterial attach='material' color={'hotpink'}/>
       </mesh>
       
     )

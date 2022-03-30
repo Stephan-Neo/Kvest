@@ -1,39 +1,44 @@
-import React from 'react';
-import Header from '../components/Header';
-import s from './styles/Day.module.css'
+import React, { useEffect, useState } from 'react';
+import { useForm } from "react-hook-form";
 import ReactFullpage from '@fullpage/react-fullpage';
+import Header from '../components/Header';
+import Navbar from '../components/Navbar';
+import Tasks from '../components/forms/Tasks';
+import NavWork from '../components/Navbars/NavWork';
+
 
 function DayWork(props){
+    const [clicked, click] = useState(false)
+    useEffect(() => {
+        document.title =`Вечерний Квест | ${props.title}`
+    })
     return(
-        <>
         <ReactFullpage
             scrollingSpeed = {700} 
             scrollHorizontally = {true}  
             sectionsColor={[]}
             css3={true}
             recordHistory={false}
-            paddingTop={200}
+            
+            controlArrows={true}
+            verticalCentered={true}
+            paddingTop={''}
+            fixedElements={'.root.header'}
 
             anchors={['page1', 'page2', 'page3', 'page4', 'page5', 'page6']}
-            menu={'#myMenu'}
+            menu={'.header'}
             lockAnchors={false}
             render={({ state, fullpageApi }) => 
-                <ReactFullpage.Wrapper>
-                    {() => fullpageApi.moveTo(1, 0)}
-                    <Header day={props.day} id={props.id}/>  
-                    <div className='section'id={props.id}>
-                        <div className={s.task}>
-                            {props.text}
-                            {props.day}
+                    <ReactFullpage.Wrapper>
+                        <div className='header' id={'day'}>
+                            <Navbar Ap={fullpageApi} funcClick={click} clicked={clicked}/>
+                            <NavWork />
                         </div>
-                    </div>
-                    <div className='section' id={props.id}>
-                        <button>Move to</button>
-                    </div>
-                </ReactFullpage.Wrapper>
+                        <Header day={props.title} id={props.id}/>  
+                        <Tasks id={props.id} clicked={clicked}/>
+                    </ReactFullpage.Wrapper>                                        
             }
         />
-    </>
     )
 }
 

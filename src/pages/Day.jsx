@@ -1,21 +1,19 @@
 import React, { useEffect } from 'react';
-import s from './styles/Day.module.css'
-import Navbar from '../components/Navbar';
-import ReactFullpage from '@fullpage/react-fullpage';
+import DayWork from './DayWork';
 
-function Day(props) {
+
+function Day(props){
     useEffect(() => {
-        document.title = props.title;
-    })
+        const rootDiv = document.querySelector('#root')
+        const head = document.querySelector('.header')
+        rootDiv.append(head)
+    })   
     return(
-        <>  
-            <div className={s.navbar_wrapper}>
-                <Navbar Nav={props.Nav}/>
-            </div>
-            {props.DayComponent}
-        </> 
+        <div className='wrapperGlobal'>
+        {props.content}
+        </div>
+
     )
 }
 
-export default Day;
-
+export default Day 
