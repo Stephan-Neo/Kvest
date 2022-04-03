@@ -1,10 +1,13 @@
-import React, {useEffect} from "react";
+import React, {useEffect, useState} from "react";
 import { useForm } from "react-hook-form";
 import s from "../styles/SignUp.module.css"
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import ModalWindow from "../ModalWindow";
 
 function SignUp() {
   useEffect(() => {document.title = 'Вечерний Квест | Регистрация'})
+  let navigate = useNavigate()
+  const [modal, setModal] = useState(false)
   const {
     register, watch,
     formState: {
@@ -17,7 +20,22 @@ function SignUp() {
   })
 
   const onSubmit = (data) => {
-    alert(JSON.stringify(data))
+    setModal(false)
+    let response
+    fetch('http://93.159.221.10/register', {
+      method: 'post',
+      headers: {"Content-Type": 'aplication/json'},
+      body: JSON.stringify(data)
+    }).then((responce) => {
+      return responce.json()
+    }).then((d) => {
+        response = d
+        if(response.status !== "USER_EXIST"){
+          return navigate("/login")
+        }else{
+          setModal(true)
+        }
+    })
     reset();
   }
   return (
@@ -97,6 +115,7 @@ function SignUp() {
           <Link to='/' className={s.link_login}>Главная</Link>
           <Link to='/login' className={s.link_login}>Войти</Link>
         </div>
+        {modal ? <ModalWindow text={'Такой пользователь уже существует!'}/>: console.log()}
       </div>
   )
 }

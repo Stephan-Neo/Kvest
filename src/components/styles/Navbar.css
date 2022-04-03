@@ -101,6 +101,7 @@
     border-bottom: 3px solid white;
 }
 .login{
+    margin-top: 16px;
     display: flex;
     justify-content: space-around;
     background: #1a83ff;
@@ -130,6 +131,28 @@
 }
 #mainpage-link{
     margin-top: 16px;
+}
+.information_wrapper{
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+    flex-direction: column;
+    border: 2px solid rgb(151, 145, 145);
+}
+.icon_wrapper{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.icon_wrapper .icon svg{
+    height: 40px;
+    width: 40px;
+}
+.score{
+    margin-top: 20px;
 }
 @media (max-width: 989px){
     .header{

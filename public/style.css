@@ -65,3 +65,18 @@ body>#default{
 body>#day{
     display: none;
 }
+.error_wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 200px;
+    font-size: 24px;
+    font-weight: 700;
+}
+.close_error{
+    height: 40px;
+}
+.close_error:hover{
+    cursor: pointer;
+}

@@ -3,8 +3,12 @@ import { Link } from 'react-router-dom';
 import * as FaIcons from 'react-icons/fa'
 import * as AiIcons from 'react-icons/ai'
 import './styles/Navbar.css'
-import { SidebarData } from '../mockup/SidebarData'
 import { IconContext } from "react-icons"
+import {SidebarDataLogin} from "../mockup/SidebarDataLogin"
+import {SidebarDataPublic} from "../mockup/SidebarDataPublic"
+import LinkPublic from './LinkPublic';
+import LinkLogin from './LinkLogin';
+import MenInformation from './MenInformation';
 
 function Navbar(props) {
     const [sidebar, setSidebar] = useState(false)
@@ -28,7 +32,19 @@ function Navbar(props) {
                                     <AiIcons.AiOutlineClose />
                                 </span>
                             </li>
-                            {SidebarData.map((item, index) => {
+                            {localStorage.getItem('login') ? SidebarDataLogin.map((item, index) => {
+                                return (
+                                    <li key={index} className={item.cName} id={item.id}>
+                                        <Link to={item.path} onClick={() => {
+                                            props.Ap.moveTo(1)
+                                            props.funcClick(true)                       
+                                            }}>
+                                            {item.icon}
+                                            <span>{item.title}</span>
+                                        </Link>
+                                    </li>
+                                )
+                            }): SidebarDataPublic.map((item, index) => {
                                 return (
                                     <li key={index} className={item.cName} id={item.id}>
                                         <Link to={item.path} onClick={() => {
@@ -42,14 +58,8 @@ function Navbar(props) {
                                 )
                             })}
                         </div>
-                        <div className="login">
-                            <li>
-                                <Link to='/signup'>Регистрация</Link>
-                            </li>
-                            <li>
-                                <Link to='/login'>Войти</Link>
-                            </li>
-                        </div>
+                        {localStorage.getItem('login') ? <MenInformation/>: console.log()}
+                        {localStorage.getItem('login') ? <LinkLogin/>: <LinkPublic/>}
                     </ul>
                 </nav>
             </div>

@@ -8,7 +8,7 @@ function TaskFirst(props){
         if(props.clicked){
             reset()
         }
-    })
+    }, [props.id])
     const onSubmit = (data) => {
         alert(JSON.stringify(data))
         reset();
@@ -17,7 +17,7 @@ function TaskFirst(props){
         <div className='section' id={props.id}>
             <div className={s.task}>
                 <div className={s.headTask}>Задание 1</div>
-                <div className={s.textTask}>Разгадайте шифр</div>
+                <div className={s.textTask}>Разгадайте шифр: {props.loadTask ? JSON.parse(localStorage.getItem(props.id))[0].text: ' '}</div>
                 <span>Ваш ответ:</span>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <textarea type="text" className={s.input}

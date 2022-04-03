@@ -5,11 +5,10 @@ import Header from '../components/Header';
 import Navbar from '../components/Navbar';
 import NavDefault from '../components/Navbars/NavDefault';
 
-
 function DayDefault(props){
     const [clicked, click] = useState(false)
     useEffect(() => {
-        document.title =`Вечерний Квест | ${props.title}` 
+        document.title =`Вечерний Квест | ${props.title}`;
     })
     return(
         <ReactFullpage

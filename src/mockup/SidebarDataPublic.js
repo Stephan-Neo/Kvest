@@ -3,32 +3,32 @@ import * as FiIcons from 'react-icons/fi'
 import * as AiIcons from 'react-icons/ai'
 import * as FcIcons from 'react-icons/fc'
 
-export const SidebarData = [
+export const SidebarDataPublic = [
     {
         title: 'День 1',
-        path: '/day1',
-        icon: <FiIcons.FiCoffee />,
+        path: '/',
+        icon: <AiIcons.AiOutlineLogin />,
         cName: 'nav-text',
         id: ''
     },
     {
         title: 'День 2',
-        path: '/day2',
-        icon: <FiIcons.FiCoffee />,
+        path: '/',
+        icon: <AiIcons.AiOutlineLogin />,
         cName: 'nav-text',
         id: ''
     },
     {
         title: 'День 3',
-        path: '/day3',
-        icon: <FiIcons.FiCoffee />,
+        path: '/',
+        icon: <AiIcons.AiOutlineLogin />,
         cName: 'nav-text',
         id: ''
     },
     {
         title: 'День 4',
-        path: '/day4',
-        icon: <FiIcons.FiCoffee />,
+        path: '/',
+        icon: <AiIcons.AiOutlineLogin />,
         cName: 'nav-text',
         id: 'last-day'
     },
