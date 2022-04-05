@@ -51,6 +51,9 @@
 .input:focus{
     border: 2px solid #1a83ff;
 }
+.input:disabled{
+    border: 2px solid rgb(86, 88, 86);
+}
 .button{
     background: #1a83ff;
     color: white;
@@ -64,6 +67,9 @@
 .button:hover{
     cursor: pointer;
 }
+.button:disabled{
+    background: rgb(86, 88, 86);
+}
 .pod{
     display: flex;
     flex-direction: row;
@@ -72,6 +78,22 @@
 }
 .error{
     width: 50%;
+}
+.answer{
+    display: flex;
+}
+.resh{
+    background-color: green;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 5px;
+}
+.neresh{
+    background-color: rgb(228, 34, 34);
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 5px;
 }
 @media (max-width: 425px){
     .task{

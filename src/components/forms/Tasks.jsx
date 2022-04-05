@@ -8,6 +8,7 @@ import TaskFifth from "./Tasks/TaskFifth";
 function Tasks(props){
     const [loadTask, setLoadTask] = useState(false)
     useEffect(() => {
+        setLoadTask(false)
         if(props.id === 'day1'){
             let response1
             let tasks1
@@ -19,6 +20,7 @@ function Tasks(props){
                 return responce1.json()
             }).then((d) => {
                 response1 = d
+                console.log(response1)
                 tasks1 = JSON.parse(response1.task)
                 localStorage.setItem('day1', JSON.stringify(tasks1.tasks))
                 setLoadTask(true)
