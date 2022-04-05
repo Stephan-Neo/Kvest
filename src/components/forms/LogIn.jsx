@@ -36,12 +36,36 @@ function LogIn() {
       return responce.json()
     }).then((d) => {
         response = d
-        console.log(response)
         if(response.status !== "USER_NOT_EXISTS"){
           localStorage.setItem('firstName', response.firstName)
           localStorage.setItem('id_user', response.status)
           localStorage.setItem('score', response.score)
           localStorage.setItem('login', true)
+
+          localStorage.setItem('day1', JSON.stringify([{"id":1,"type":"text","text":"","status":"not_completed"},
+          {"id":2,"type":"text","text":"","status":"not_completed"},
+          {"id":3,"type":"text","text":"","status":"not_completed"},
+          {"id":4,"type":"text","text":"","status":"not_completed"},
+          {"id":5,"type":"text","text":"","status":"not_completed"}]))
+
+          localStorage.setItem('day2', JSON.stringify([{"id":1,"type":"text","text":"","status":"not_completed"},
+          {"id":2,"type":"text","text":"","status":"not_completed"},
+          {"id":3,"type":"text","text":"","status":"not_completed"},
+          {"id":4,"type":"text","text":"","status":"not_completed"},
+          {"id":5,"type":"text","text":"","status":"not_completed"}]))
+
+          localStorage.setItem('day3', JSON.stringify([{"id":1,"type":"text","text":"","status":"not_completed"},
+          {"id":2,"type":"text","text":"","status":"not_completed"},
+          {"id":3,"type":"text","text":"","status":"not_completed"},
+          {"id":4,"type":"text","text":"","status":"not_completed"},
+          {"id":5,"type":"text","text":"","status":"not_completed"}]))
+
+          localStorage.setItem('day4', JSON.stringify([{"id":1,"type":"text","text":"","status":"not_completed"},
+          {"id":2,"type":"text","text":"","status":"not_completed"},
+          {"id":3,"type":"text","text":"","status":"not_completed"},
+          {"id":4,"type":"text","text":"","status":"not_completed"},
+          {"id":5,"type":"text","text":"","status":"not_completed"}]))
+
           return navigate("/")
         }else{
           setModal(true)
@@ -98,7 +122,7 @@ function LogIn() {
         </form>
         <div className={s.links}>
           <Link to='/' className={s.link_login}>Главная</Link>
-          <Link to='/signup' className={s.link_login}>Регистрация</Link>
+          {/* <Link to='/signup' className={s.link_login}>Регистрация</Link> */}
         </div>
         {modal ? <ModalWindow text={'Такого пользователя не существует или вы ввели неправильные данные!'}/>: console.log()}
       </div> 

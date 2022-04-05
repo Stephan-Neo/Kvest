@@ -6,10 +6,6 @@ export default function LinkLogin() {
     localStorage.clear()
   }
   return (
-    <div className="login">
-        <li>
-            <Link to='/login' onClick={onSubmit}>Выйти</Link>
-        </li>
-    </div>
+    <Link to='/login' onClick={onSubmit} className='login'>Выйти</Link>
   )
 }

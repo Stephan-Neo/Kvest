@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import s from '../../../pages/styles/Day.module.css'
 
 function TaskFirst(props){
+    let taskId = 0
     const { register, handleSubmit, watch, reset, formState: {errors, isValid} } = useForm({mode: 'onSubmit'})
     const [dis, setDis] = useState(false)
     let idDay;
@@ -10,12 +11,19 @@ function TaskFirst(props){
         if(props.clicked){
             reset()
         }
-        if(JSON.parse(localStorage.getItem(props.id))[0].status === 'completed'){
+        if(JSON.parse(localStorage.getItem(props.id))[taskId].status === 'completed'){
             setDis(true)
         }else{
             setDis(false)
         }
     }, [props.id])
+    useEffect(() => {
+        if(JSON.parse(localStorage.getItem(props.id))[taskId].status === 'completed'){
+            setDis(true)
+        }else{
+            setDis(false)
+        }
+    }, [localStorage.getItem(props.id)])
     const onSubmit = (data) => {
         if(props.id === 'day1'){
             idDay = 1
@@ -40,11 +48,8 @@ function TaskFirst(props){
                 response = d
                 if(JSON.parse(response.completed)){
                     setDis(true)
-                    let last_score = Number(localStorage.getItem('score'))
-                    localStorage.setItem('score', last_score + 1)
-
                     let response_update_score
-                    fetch('http://93.159.221.10/update_rezult', {
+                    fetch('http://93.159.221.10/update_result', {
                         method: 'post',
                         headers: {"Content-Type": 'aplication/json'},
                         body: JSON.stringify({id: Number(localStorage.getItem("id_user"))})
@@ -52,10 +57,8 @@ function TaskFirst(props){
                             return response_update_score.json()
                         }).then((d) => {
                             response_update_score = d
-                            console.log(response_update_score)
+                            localStorage.setItem('score', response_update_score.score)
                         })
-                }else{
-                    setDis(false)
                 }
         })
         reset();
@@ -64,7 +67,7 @@ function TaskFirst(props){
         <div className='section' id={props.id}>
             <div className={s.task}>
                 <div className={s.headTask}>Задание 1</div>
-                <div className={s.textTask}>Разгадайте шифр: {props.loadTask ? JSON.parse(localStorage.getItem(props.id))[0].text: ' '}</div>
+                <div className={s.textTask}>Разгадайте шифр: {props.loadTask ? JSON.parse(localStorage.getItem(props.id))[taskId].text: ' '}</div>
                 <span>Ваш ответ:</span>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <textarea type="text" className={s.input} disabled={dis ? true : false}

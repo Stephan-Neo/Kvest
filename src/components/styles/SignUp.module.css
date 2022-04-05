@@ -96,7 +96,7 @@ p{
     display: flex;
     width: 100%;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: flex-end;
 }
 @media (max-width: 1024px){
     .form{

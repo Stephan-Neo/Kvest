@@ -10,6 +10,7 @@ import NavWork from './components/Navbars/NavWork'
 import DayDefault from './pages/DayDefault';
 import NavDefault from './components/Navbars/NavDefault'
 import DayWork from './pages/DayWork';
+import NotFound from './pages/NotFound'
 
 ReactDOM.render( 
   <BrowserRouter>
@@ -21,8 +22,9 @@ ReactDOM.render(
                 <Route path="day2" element={<Day content={<DayWork  id={'day2'} title={'День 2'}/>}/>}/>
                 <Route path="day3" element={<Day content={<DayWork  id={'day3'} title={'День 3'}/>}/>}/>
                 <Route path="day4" element={<Day content={<DayWork  id={'day4'} title={'День 4'}/>}/>}/>
+                <Route path="*" element={<NotFound/>}/>
               </Route> 
-              <Route path='/signup' element={<Form children={<SignUp/>}/>}/>
+              {/* <Route path='/signup' element={<Form children={<SignUp/>}/>}/> */}
               <Route path='/login' element={<Form children={<LogIn/>}/>}/>  
             </Routes>
     </BrowserRouter>
