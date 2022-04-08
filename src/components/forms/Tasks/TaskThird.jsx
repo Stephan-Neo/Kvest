@@ -38,7 +38,7 @@ function TaskThird(props){
             idDay = 4
         }
         let response
-        fetch('https://api.fkn-gt.ru:3000//check_task', {
+        fetch('https://api.fkn-gt.ru:3000/check_task', {
             method: 'post',
             headers: {"Content-Type": 'aplication/json'},
             body: JSON.stringify({id: Number(localStorage.getItem("id_user")), day: idDay, answer: data})
