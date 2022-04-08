@@ -11,7 +11,7 @@ function Tasks(props){
         setLoadTask(false)
 
         let response_update_score
-        fetch('http://93.159.221.10/update_result', {
+        fetch('https://api.fkn-gt.ru:3000/update_result', {
             method: 'post',
             headers: {"Content-Type": 'aplication/json'},
             body: JSON.stringify({id: Number(localStorage.getItem("id_user"))})
@@ -26,7 +26,7 @@ function Tasks(props){
         if(props.id === 'day1'){
             let responce1
             let tasks1
-            fetch('http://93.159.221.10/get_task', {
+            fetch('https://api.fkn-gt.ru:3000/get_task', {
             method: 'post',
             headers: {"Content-Type": 'aplication/json'},
             body: JSON.stringify({id: Number(localStorage.getItem("id_user")), day: 1})
@@ -42,7 +42,7 @@ function Tasks(props){
         if(props.id === 'day2'){
             let responce2
             let tasks2
-            fetch('http://93.159.221.10/get_task', {
+            fetch('https://api.fkn-gt.ru:3000/get_task', {
             method: 'post',
             headers: {"Content-Type": 'aplication/json'},
             body: JSON.stringify({id: Number(localStorage.getItem("id_user")), day: 2})
@@ -58,7 +58,7 @@ function Tasks(props){
         if(props.id === 'day3'){
             let responce3
             let tasks3
-            fetch('http://93.159.221.10/get_task', {
+            fetch('https://api.fkn-gt.ru:3000/get_task', {
             method: 'post',
             headers: {"Content-Type": 'aplication/json'},
             body: JSON.stringify({id: Number(localStorage.getItem("id_user")), day: 3})
@@ -74,7 +74,7 @@ function Tasks(props){
         if(props.id === 'day4'){
             let responce4
             let tasks4
-            fetch('http://93.159.221.10/get_task', {
+            fetch('https://api.fkn-gt.ru:3000/get_task', {
             method: 'post',
             headers: {"Content-Type": 'aplication/json'},
             body: JSON.stringify({id: Number(localStorage.getItem("id_user")), day: 4})

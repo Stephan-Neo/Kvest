@@ -28,7 +28,7 @@ function LogIn() {
   const onSubmit = (data) => {
     setModal(false)
     let response
-    fetch('http://93.159.221.10/login', {
+    fetch('https://api.fkn-gt.ru:3000/login', {
       method: 'post',
       headers: {"Content-Type": 'aplication/json'},
       body: JSON.stringify(data)

@@ -38,7 +38,7 @@ function TaskSecond(props){
             idDay = 4
         }
         let response
-        fetch('http://93.159.221.10/check_task', {
+        fetch('https://api.fkn-gt.ru:3000/check_task', {
             method: 'post',
             headers: {"Content-Type": 'aplication/json'},
             body: JSON.stringify({id: Number(localStorage.getItem("id_user")), day: idDay, answer: data})
@@ -49,7 +49,7 @@ function TaskSecond(props){
                 if(JSON.parse(response.completed)){
                     setDis(true)
                     let response_update_score
-                    fetch('http://93.159.221.10/update_result', {
+                    fetch('https://api.fkn-gt.ru:3000/update_result', {
                         method: 'post',
                         headers: {"Content-Type": 'aplication/json'},
                         body: JSON.stringify({id: Number(localStorage.getItem("id_user"))})
