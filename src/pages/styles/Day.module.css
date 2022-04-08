@@ -35,6 +35,8 @@
 .textTask{
     font-size: 20px;
     margin-bottom: 50px;
+    word-break: break-all;
+    line-height: 30px;
 }
 /* rgb(93, 43, 231) */
 .input{
