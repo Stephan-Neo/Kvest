@@ -36,7 +36,13 @@ function DayDefault(props){
                         </div>
                         <Header day={props.title} id={props.id}/>  
                         <div className="section" id={props.id}>
-                            {props.text}
+                            <div className="text_wrapper">
+                                <div className="title">Описание</div>
+                                <div className="text">
+                                    {props.text}
+                                </div>                              
+                            </div>
+                            
                         </div>
                     </ReactFullpage.Wrapper>
                     

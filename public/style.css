@@ -91,3 +91,25 @@ body>#day{
     color: white;
     font-size: 400px;
 }
+.text_wrapper{
+    color: #ffffff;
+    background-color: #22272eaf;
+    padding: 30px;
+    border-radius: 15px;
+    margin: 30px 10px 0 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.text_wrapper .title{
+    font-size: 30px;
+    margin-bottom: 30px;
+    font-weight: 800;
+}
+.text_wrapper .text{
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    font-style: oblique;
+}
