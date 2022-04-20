@@ -67,7 +67,7 @@ function TaskFifth(props){
         <div className='section' id={props.id}>
             <div className={s.task}>
                 <div className={s.headTask}>Задание 5</div>
-                <div className={s.textTask}>Разгадайте шифр: {props.loadTask ? JSON.parse(localStorage.getItem(props.id))[taskId].text: ' '}</div>
+                <div className={s.textTask}>Разгадайте шифр: {props.loadTask ? JSON.parse(localStorage.getItem(props.id))[taskId].text.split("\\n").map(str => <p id="n">{str}</p>): ' '}</div>
                 <span>Ваш ответ:</span>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <textarea type="text" className={s.input} disabled={dis ? true : false}

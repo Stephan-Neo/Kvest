@@ -8,6 +8,8 @@ import NavWork from '../components/Navbars/NavWork';
 import { useNavigate } from "react-router-dom";
 
 function DayWork(props){
+    // day1
+    const accesDay = 'day1'
     let navigate = useNavigate()
     const [clicked, click] = useState(false)
     useEffect(() => {
@@ -19,7 +21,19 @@ function DayWork(props){
         if(!login){
             return navigate('/')
         }
+        // control access day 
+        // if(props.id !== accesDay){
+        //     return navigate('/')
+        // }
+
+        
     }, [])
+    // control access day 
+    // useEffect(() => {
+    //     if(props.id !== accesDay){
+    //         return navigate('/')
+    //     }
+    // }, [props.id])
     return(
         <ReactFullpage
             scrollingSpeed = {700} 

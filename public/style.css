@@ -113,3 +113,8 @@ body>#day{
     line-height: 30px;
     font-style: oblique;
 }
+#n{
+    color: white;
+    margin: 0;
+    font-weight: 700;
+}

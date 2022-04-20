@@ -2,19 +2,21 @@ import React from 'react'
 import * as FiIcons from 'react-icons/fi'
 import * as AiIcons from 'react-icons/ai'
 import * as FcIcons from 'react-icons/fc'
+import * as MdIcons from 'react-icons/md'
+import * as BsIcons from 'react-icons/bs'
 
-export const SidebarDataLogin = [
+export const SidebarDataLoginDay2 = [
     {
         title: 'День 1',
         path: '/day1',
-        icon: <FiIcons.FiCoffee />,
+        icon: <MdIcons.MdTimerOff />,
         cName: 'nav-text',
         id: ''
     },
     {
         title: 'День 2',
         path: '/day2',
-        icon: <FiIcons.FiCoffee />,
+        icon: <BsIcons.BsJournalCheck />,
         cName: 'nav-text',
         id: ''
     },
