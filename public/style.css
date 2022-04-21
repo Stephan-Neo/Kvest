@@ -118,3 +118,8 @@ body>#day{
     margin: 0;
     font-weight: 700;
 }
+.link_pod{
+    color: inherit;
+    text-decoration: inherit;
+    cursor: inherit;
+}

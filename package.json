@@ -19,7 +19,7 @@
     "react-modal": "^3.14.4",
     "react-router": "^6.3.0",
     "react-router-dom": "^6.2.2",
-    "react-scripts": "5.0.0",
+    "react-scripts": "^5.0.0",
     "react-three-fiber": "^6.0.13",
     "three": "^0.138.3",
     "troika-three-text": "^0.46.3",
