@@ -22,18 +22,20 @@ function DayWork(props){
             return navigate('/')
         }
         // control access day 
-        // if(props.id !== accesDay){
-        //     return navigate('/')
-        // }
+        if(props.id !== accesDay){
+            return navigate('/')
+        }
 
         
     }, [])
+
     // control access day 
-    // useEffect(() => {
-    //     if(props.id !== accesDay){
-    //         return navigate('/')
-    //     }
-    // }, [props.id])
+    useEffect(() => {
+        if(props.id !== accesDay){
+            return navigate('/')
+        }
+    }, [props.id])
+    
     return(
         <ReactFullpage
             scrollingSpeed = {700} 
