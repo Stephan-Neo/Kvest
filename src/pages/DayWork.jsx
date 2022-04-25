@@ -9,7 +9,7 @@ import { useNavigate } from "react-router-dom";
 
 function DayWork(props){
     // day1
-    const accesDay = 'day1'
+    const accesDay = 'day2'
     let navigate = useNavigate()
     const [clicked, click] = useState(false)
     useEffect(() => {
