@@ -36,7 +36,7 @@ function Navbar(props) {
                                     <AiIcons.AiOutlineClose />
                                 </span>
                             </li>
-                            {localStorage.getItem('login') ? SidebarDataLoginDay3.map((item, index) => {
+                            {localStorage.getItem('login') ? SidebarDataLoginEnd.map((item, index) => {
                                 return (
                                     <li key={index} className={item.cName} id={item.id}>
                                         <Link to={item.path} onClick={() => {
