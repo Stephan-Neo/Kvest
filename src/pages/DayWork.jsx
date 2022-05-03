@@ -16,25 +16,25 @@ function DayWork(props){
         document.title =`Вечерний Квест | ${props.title}`
         
     })
-    useEffect(() => {
-        let login = localStorage.getItem('login')
-        if(!login){
-            return navigate('/')
-        }
-        // control access day 
-        if(props.id !== accesDay){
-            return navigate('/')
-        }
+    // useEffect(() => {
+    //     let login = localStorage.getItem('login')
+    //     if(!login){
+    //         return navigate('/')
+    //     }
+    //     // control access day 
+    //     if(props.id !== accesDay){
+    //         return navigate('/')
+    //     }
 
         
-    }, [])
+    // }, [])
 
     // control access day 
-    useEffect(() => {
-        if(props.id !== accesDay){
-            return navigate('/')
-        }
-    }, [props.id])
+    // useEffect(() => {
+    //     if(props.id !== accesDay){
+    //         return navigate('/')
+    //     }
+    // }, [props.id])
     
     return(
         <ReactFullpage
